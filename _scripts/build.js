@@ -57,7 +57,7 @@ function generateHeaderNav(activeSlug) {
         </header>
         <nav class="main-nav">
             <a href="/" class="nav-logo">
-                <img src="/immagini/static/logo.png" alt="GrazianaGarbeni">
+                <img src="/immagini/static/logo-trasp.png" alt="GrazianaGarbeni">
             </a>
             <div class="nav-menu">
                 <ul>${menuHtml}</ul>
