@@ -1,3 +1,8 @@
+# Dipendenze di Node
 node_modules
-dist/\nnode_modules/\n.DS_Store
-./dist
+
+# Cartella del sito generato
+dist
+
+# File di sistema macOS
+.DS_Store
