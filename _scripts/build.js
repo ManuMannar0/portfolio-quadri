@@ -53,11 +53,11 @@ function generateHeaderNav(activeSlug) {
     });
     return `
         <header class="main-header">
-            <img src="/immagini/static/header.png" alt="Logo principale dell'artista">
+            <img src="/immagini/static/header.png" alt="GrazianaGarbeni">
         </header>
         <nav class="main-nav">
             <a href="/" class="nav-logo">
-                <img src="https://mr.bingo/wp-content/themes/bingo/images/bingo_logo.png" alt="Logo piccolo">
+                <img src="/immagini/static/logo.png" alt="GrazianaGarbeni">
             </a>
             <div class="nav-menu">
                 <ul>${menuHtml}</ul>
