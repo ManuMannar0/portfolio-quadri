@@ -1,0 +1,44 @@
+/* Header principale con il logo grande */
+.main-header {
+    padding: 20px 0;
+    display: none;
+    justify-content: center;
+}
+
+.main-header img {
+    /* max-width: 300px; */
+    width: 80vw;
+}
+
+/* Barra di navigazione */
+.main-nav {
+    display: flex;
+    /* Impila gli elementi (logo e menu) uno sopra l'altro */
+    flex-direction: column;
+    /* Centra gli elementi orizzontalmente */
+    align-items: center;
+    /* Aggiunge un po' di spazio tra il logo e il menu */
+    gap: 15px; 
+    padding: 1rem 0; /* Aumentiamo un po' lo spazio sopra/sotto */
+}
+
+.nav-logo img {
+    height: 40px; /* Altezza fissa per il logo piccolo */
+}
+
+.nav-menu {
+    width: 100vw;
+}
+
+.nav-menu ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0rem 1rem;
+}
+
+.nav-menu li a {
+    /* text-transform: uppercase; */
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+}

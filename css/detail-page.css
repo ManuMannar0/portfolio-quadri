@@ -1,0 +1,28 @@
+/* css/detail-page.css */
+
+.artwork-detail-container {
+    padding: 20px 0;
+}
+
+.artwork-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.artwork-info {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 5px 0;
+    margin-bottom: 20px;
+}
+
+.artwork-info p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.artwork-images {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}

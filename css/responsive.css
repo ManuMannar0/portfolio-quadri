@@ -1,0 +1,62 @@
+/*-------------------------------------------*\
+    TABLET (es. da 768px in su)
+\*-------------------------------------------*/
+@media (min-width: 768px) {
+    
+    .main-container.hp .main-header {
+        display: flex;
+    }
+
+    /* NUOVA REGOLA: Ripristina il layout orizzontale per la navigazione */
+    .main-nav {
+        flex-direction: row; /* Mette gli elementi di nuovo in riga */
+        justify-content: space-between; /* Spazio tra logo e menu */
+        padding-top: 1rem; /* Riduciamo di nuovo il padding */
+        gap: 0; /* Rimuoviamo il gap verticale */
+    }
+
+    .main-nav a {
+        flex: 1;
+    }
+
+    .nav-logo img {
+        height: unset;
+    }
+
+    .nav-menu {
+        width: unset;
+        flex: 5;
+    }
+
+    .nav-menu ul {
+        justify-content: flex-end;
+        padding: 0;
+        gap: 4rem;
+    }
+
+    /* Trasforma la griglia da una colonna a due */
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Due colonne uguali */
+        gap: 15px;
+    }
+
+    .portfolio-item {
+        margin-bottom: 0; /* Rimuoviamo il margine ora che c'è il gap */
+    }
+
+    .main-container {
+        width: 70%;
+    }
+}
+
+
+/*-------------------------------------------*\
+    DESKTOP (es. da 1024px in su)
+\*-------------------------------------------*/
+@media (min-width: 1024px) {
+    /* Trasforma la griglia da due colonne a tre, come nel sito di esempio */
+    .portfolio-grid {
+        grid-template-columns: 1fr 1fr 1fr; /* Tre colonne uguali */
+    }
+}
