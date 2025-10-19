@@ -12,10 +12,10 @@
         "slug": "about",
         "titolo": "About",
         "is_on_menu": true,
-        "descrizione": "Questa è la mia bio...",
+        "descrizione": "<strong>Graziana</strong> è un'artista visuale la cui ricerca si muove agilmente tra l'espressività della pittura e la sintesi concettuale dell'illustrazione digitale.<br>Nelle sue opere su tela e carta, realizzate con acrilici, inchiostri e tecniche miste, emerge una dimensione onirica e simbolica.<br>Paesaggi trasfigurati, figure umane in dialogo con la natura e nature morte cariche di mistero compongono un universo interiore dove il confine tra realtà e sogno si fa labile. La sua pennellata alterna momenti di fluidità e trasparenza a campiture di colore vibrante, creando composizioni che invitano all'introspezione.<br>Questa capacità di indagare e interpretare il mondo si traduce, nella sua pratica digitale, in un linguaggio più grafico e sintetico. Destinati principalmente all'editoria, questi lavori distillano concetti complessi in immagini pulite, evocative e narrative.<br>Il filo conduttore che lega i diversi aspetti della sua produzione è la narrazione visiva. Sia che esplori un paesaggio emotivo su tela, sia che illustri un'idea per un articolo, utilizza un linguaggio visivo personale e stratificato per tradurre il visibile e l'invisibile in forme nuove, creando un ponte tra l'espressione lirica e la comunicazione concettuale.",
         "immagine_fissa": "about-image.jpg",
         "meta_title": "About | Graziana Garbeni",
-        "meta_description": "<strong>Graziana</strong> è un'artista visuale la cui ricerca si muove agilmente tra l'espressività della pittura e la sintesi concettuale dell'illustrazione digitale.",
+        "meta_description": "Graziana è un'artista visuale la cui ricerca si muove agilmente tra l'espressività della pittura e la sintesi concettuale dell'illustrazione digitale.",
         "og_image": "about-image.jpg"
     },
     {
