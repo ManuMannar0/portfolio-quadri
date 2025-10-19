@@ -15,14 +15,14 @@
         "descrizione": "Questa è la mia bio...",
         "immagine_fissa": "about-image.jpg",
         "meta_title": "About | Graziana Garbeni",
-        "meta_description": "Graziana è un'artista visuale la cui ricerca si muove agilmente tra l'espressività della pittura e la sintesi concettuale dell'illustrazione digitale.",
+        "meta_description": "<strong>Graziana</strong> è un'artista visuale la cui ricerca si muove agilmente tra l'espressività della pittura e la sintesi concettuale dell'illustrazione digitale.",
         "og_image": "about-image.jpg"
     },
     {
         "slug": "contact",
         "titolo": "Contatti",
         "is_on_menu": true,
-        "descrizione": "Scrivimi per informazioni o commissioni.",
+        "descrizione": "Per informazioni, commissioni o saluti, puoi scrivermi a <a href='mailto:graziana.garbeni@gmail.com'>graziana.garbeni@gmail.com</a>.",
         "immagine_fissa": "contact-image.png",
         "meta_title": "Contatti | Graziana Garbeni",
         "meta_description": "Graziana è un'artista visuale la cui ricerca si muove agilmente tra l'espressività della pittura e la sintesi concettuale dell'illustrazione digitale.",
