@@ -123,6 +123,12 @@ console.log(`✅ Creata pagina: index.html`);
 // 7. Copia gli asset
 fs.cpSync(ASSETS_DIR.css, path.join(DIST_DIR, 'css'), { recursive: true });
 fs.cpSync(ASSETS_DIR.immagini, path.join(DIST_DIR, 'immagini'), { recursive: true });
-console.log('✅ Copiati asset: css, immagini');
+
+fs.copyFileSync(
+    path.join(__dirname, '..', '_assets', 'favicon.ico'), 
+    path.join(DIST_DIR, 'favicon.ico')
+);
+
+console.log('✅ Copiati asset: css, immagini, favicon'); // Aggiorna il log
 
 console.log('\n🚀 Build completato con successo!');
