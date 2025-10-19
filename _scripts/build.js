@@ -37,11 +37,11 @@ data.forEach(item => {
 // Costruisci l'HTML completo per header e nav, che verrà riutilizzato in tutti i template
 const headerNavHtml = `
     <header class="main-header">
-        <img src="./immagini/static/hp_trasp.png" alt="GG">
+        <img src="./immagini/static/header.png" alt="GrazianaGarbeni">
     </header>
     <nav class="main-nav">
         <a href="/" class="nav-logo">
-            <img src="https://mr.bingo/wp-content/themes/bingo/images/bingo_logo.png" alt="Logo piccolo">
+            <img src="./immagini/static/logo.png" alt="GrazianaGarbeni">
         </a>
         <div class="nav-menu">
             <ul>${menuHtml}</ul>

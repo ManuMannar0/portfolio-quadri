@@ -1,6 +1,7 @@
 /* Header principale con il logo grande */
 .main-header {
     padding: 20px 0;
+    display: none;
     justify-content: center;
 }
 
