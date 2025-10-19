@@ -1,1 +1,2 @@
 node_modules
+dist/\nnode_modules/\n.DS_Store

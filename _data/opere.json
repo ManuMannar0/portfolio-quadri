@@ -8,7 +8,7 @@
     {
         "slug": "about",
         "titolo": "About",
-        "descrizione": "Questa è la mia bio. Sono un artista che vive e lavora a... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.",
+        "descrizione": "",
         "immagine_fissa": "about-image.jpg",
         "is_on_menu": true
     },
