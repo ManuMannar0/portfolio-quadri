@@ -1,6 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
+// --- IMPOSTAZIONI ---
+const BASE_URL = 'https://www.grazianagarbeni.com'; // Il tuo dominio finale
+
 // Definiamo i percorsi
 const DATA_FILE = path.join(__dirname, '..', '_data', 'opere.json');
 const OPERA_TEMPLATE = path.join(__dirname, '..', '_templates', 'template-opera.html');
@@ -24,24 +27,46 @@ const operaTemplate = fs.readFileSync(OPERA_TEMPLATE, 'utf-8');
 const paginaFissaTemplate = fs.readFileSync(PAGINA_FISSA_TEMPLATE, 'utf-8');
 const indexTemplate = fs.readFileSync(INDEX_TEMPLATE, 'utf-8');
 
-// 3. Genera dinamicamente il menu di navigazione
+// 3. Funzione helper per sostituire tutti i segnaposto, con logica di fallback
+function replacePlaceholders(html, item) {
+    const pageUrl = (item.slug === 'index') ? BASE_URL + '/' : `${BASE_URL}/${item.slug}.html`;
+    
+    let imageUrl = `${BASE_URL}/immagini/static/header.png`; // Immagine di fallback
+    if (item.og_image && (item.immagine_fissa || item.slug === 'index')) {
+        imageUrl = `${BASE_URL}/immagini/static/${item.og_image}`;
+    } else if (item.og_image && item.immagini) {
+        imageUrl = `${BASE_URL}/immagini/${item.slug}/${item.og_image}`;
+    }
+
+    // Logica di fallback per i meta tag
+    const metaTitle = item.meta_title || `${item.titolo} | Graziana Garbeni`;
+    const metaDescription = item.meta_description || `Scopri l'opera dell'artista visuale Graziana Garbeni.`;
+    // const metaDescription = item.meta_description || `Scopri l'opera "${item.titolo}", un pezzo unico realizzato dall'artista visuale Graziana Garbeni.`;
+
+    return html
+        .replace(/{{META_TITLE}}/g, metaTitle)
+        .replace(/{{META_DESCRIPTION}}/g, metaDescription)
+        .replace(/{{OG_URL}}/g, pageUrl)
+        .replace(/{{OG_IMAGE_URL}}/g, imageUrl)
+        .replace(/{{TITOLO}}/g, item.titolo); // Per gli H1
+}
+
+// 4. Genera dinamicamente il menu di navigazione
 let menuHtml = '';
 data.forEach(item => {
     if (item.is_on_menu) {
-        // Usa menu_link per URL personalizzati (es. "/"), altrimenti costruisci il link dallo slug
         const link = item.menu_link || `${item.slug}.html`;
         menuHtml += `<li><a href="${link}">${item.titolo}</a></li>`;
     }
 });
 
-// Costruisci l'HTML completo per header e nav, che verrà riutilizzato in tutti i template
 const headerNavHtml = `
     <header class="main-header">
-        <img src="./immagini/static/header.png" alt="GrazianaGarbeni">
+        <img src="/immagini/static/header.png" alt="Logo principale dell'artista">
     </header>
     <nav class="main-nav">
         <a href="/" class="nav-logo">
-            <img src="./immagini/static/logo.png" alt="GrazianaGarbeni">
+            <img src="https://mr.bingo/wp-content/themes/bingo/images/bingo_logo.png" alt="Logo piccolo">
         </a>
         <div class="nav-menu">
             <ul>${menuHtml}</ul>
@@ -49,40 +74,31 @@ const headerNavHtml = `
     </nav>
 `;
 
-// 4. Genera tutte le pagine e la griglia per la homepage
+// 5. Genera tutte le pagine e la griglia
 let grigliaOpereHtml = '';
-
 data.forEach(item => {
     let paginaHtml;
 
-    // A. Controlla se è una PAGINA FISSA (es. About, Contatti)
-    if (item.immagine_fissa) {
+    if (item.immagine_fissa) { // Pagina fissa
         paginaHtml = paginaFissaTemplate
             .replace('{{HEADER_NAV_HTML}}', headerNavHtml)
-            .replace(/{{TITOLO}}/g, item.titolo)
             .replace('{{DESCRIZIONE}}', item.descrizione)
             .replace('{{IMMAGINE_FISSA}}', item.immagine_fissa);
-        
+        paginaHtml = replacePlaceholders(paginaHtml, item);
         fs.writeFileSync(path.join(DIST_DIR, `${item.slug}.html`), paginaHtml);
         console.log(`✅ Creata pagina fissa: ${item.slug}.html`);
-    
-    // B. Controlla se è un'OPERA da mostrare nella griglia
-    } else if (item.immagini) {
+    } else if (item.immagini) { // Opera
         let immaginiHtml = '';
         item.immagini.forEach(img => {
             immaginiHtml += `<div class="artwork-images"><img src="immagini/${item.slug}/${img}" alt="${item.titolo}"></div>`;
         });
-        
         paginaHtml = operaTemplate
             .replace('{{HEADER_NAV_HTML}}', headerNavHtml)
-            .replace(/{{TITOLO}}/g, item.titolo)
             .replace('{{DESCRIZIONE}}', item.descrizione)
             .replace('{{IMMAGINI_HTML}}', immaginiHtml);
-
+        paginaHtml = replacePlaceholders(paginaHtml, item);
         fs.writeFileSync(path.join(DIST_DIR, `${item.slug}.html`), paginaHtml);
         console.log(`✅ Creata pagina opera: ${item.slug}.html`);
-
-        // Aggiungi questa opera alla griglia per la homepage
         grigliaOpereHtml += `
             <div class="portfolio-item">
                 <a href="${item.slug}.html">
@@ -93,17 +109,18 @@ data.forEach(item => {
                 </a>
             </div>`;
     }
-    // Nota: gli elementi che non sono né pagine fisse né opere (es. l'oggetto "Work" del menu) vengono ignorati qui.
 });
 
-// 5. Genera la homepage (index.html)
-const indexHtmlFinale = indexTemplate
+// 6. Genera la homepage
+const homepageData = data.find(item => item.slug === 'index');
+let indexHtmlFinale = indexTemplate
     .replace('{{HEADER_NAV_HTML}}', headerNavHtml)
     .replace('{{GRIGLIA_OPERE_HTML}}', grigliaOpereHtml);
+indexHtmlFinale = replacePlaceholders(indexHtmlFinale, homepageData);
 fs.writeFileSync(path.join(DIST_DIR, 'index.html'), indexHtmlFinale);
-console.log('✅ Creata pagina: index.html');
+console.log(`✅ Creata pagina: index.html`);
 
-// 6. Copia gli asset (CSS e Immagini)
+// 7. Copia gli asset
 fs.cpSync(ASSETS_DIR.css, path.join(DIST_DIR, 'css'), { recursive: true });
 fs.cpSync(ASSETS_DIR.immagini, path.join(DIST_DIR, 'immagini'), { recursive: true });
 console.log('✅ Copiati asset: css, immagini');

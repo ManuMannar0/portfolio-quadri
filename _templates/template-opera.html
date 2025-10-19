@@ -3,11 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Questo titolo verrà generato dinamicamente -->
-    <title>{{TITOLO}} | Nome Artista</title> 
-    
+
+    <!-- HTML Meta Tags -->
+    <title>{{META_TITLE}}</title>
+    <meta name="description" content="{{META_DESCRIPTION}}" />
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="{{META_TITLE}}" />
+    <meta itemprop="description" content="{{META_DESCRIPTION}}" />
+    <meta itemprop="image" content="{{OG_IMAGE_URL}}" />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="{{OG_URL}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{META_TITLE}}" />
+    <meta property="og:description" content="{{META_DESCRIPTION}}" />
+    <meta property="og:image" content="{{OG_IMAGE_URL}}" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{META_TITLE}}" />
+    <meta name="twitter:description" content="{{META_DESCRIPTION}}" />
+    <meta name="twitter:image" content="{{OG_IMAGE_URL}}" />
+
+    <!-- Link ai CSS -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/portfolio.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/detail-page.css">
 </head>
