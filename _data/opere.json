@@ -1,0 +1,190 @@
+[
+    {
+        "slug": "index",
+        "titolo": "Home",
+        "is_on_menu": true,
+        "menu_link": "/"
+    },
+    {
+        "slug": "about",
+        "titolo": "About",
+        "descrizione": "Questa è la mia bio. Sono un artista che vive e lavora a... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.",
+        "immagine_fissa": "about-image.jpg",
+        "is_on_menu": true
+    },
+    {
+        "slug": "contact",
+        "titolo": "Contatti",
+        "descrizione": "Per informazioni, commissioni o saluti, puoi scrivermi a: <a href='mailto:tuaemail@esempio.com'>tuaemail@esempio.com</a>.",
+        "immagine_fissa": "contact-image.jpg",
+        "is_on_menu": true
+    },
+    {
+        "slug": "00",
+        "titolo": "Opera 00",
+        "descrizione": "Descrizione per l'opera 00.",
+        "immagini": ["00.jpg", "00_full.jpg"]
+    },
+    {
+        "slug": "01",
+        "titolo": "Opera 01",
+        "descrizione": "Descrizione per l'opera 01.",
+        "immagini": ["01.jpg", "01_full.jpg"]
+    },
+    {
+        "slug": "digit_01",
+        "titolo": "Opera Digit 01",
+        "descrizione": "Descrizione per l'opera Digit 01.",
+        "immagini": ["digit_01.jpg", "digit_full_01.jpg"]
+    },
+    {
+        "slug": "04",
+        "titolo": "Opera 04",
+        "descrizione": "Descrizione per l'opera 04.",
+        "immagini": ["04.jpg", "04_full.jpg"]
+    },
+    {
+        "slug": "05",
+        "titolo": "Opera 05",
+        "descrizione": "Descrizione per l'opera 05.",
+        "immagini": ["05.jpg", "05_full.jpg"]
+    },
+    {
+        "slug": "digit_02",
+        "titolo": "Opera Digit 02",
+        "descrizione": "Descrizione per l'opera Digit 02.",
+        "immagini": ["digit_02.jpg", "digit_full_02.jpg"]
+    },
+    {
+        "slug": "03",
+        "titolo": "Opera 03",
+        "descrizione": "Descrizione per l'opera 03.",
+        "immagini": ["03.jpg", "03_full.jpg"]
+    },
+    {
+        "slug": "06",
+        "titolo": "Opera 06",
+        "descrizione": "Descrizione per l'opera 06.",
+        "immagini": ["06.jpg", "06_full.jpg"]
+    },
+    {
+        "slug": "digit_04",
+        "titolo": "Opera Digit 04",
+        "descrizione": "Descrizione per l'opera Digit 04.",
+        "immagini": ["digit_04.jpg", "digit_full_04.jpg"]
+    },
+    {
+        "slug": "07",
+        "titolo": "Opera 07",
+        "descrizione": "Descrizione per l'opera 07.",
+        "immagini": ["07.jpg", "07_full.jpg"]
+    },
+    {
+        "slug": "08",
+        "titolo": "Opera 08",
+        "descrizione": "Descrizione per l'opera 08.",
+        "immagini": ["08.jpg", "08_full.jpg"]
+    },
+    {
+        "slug": "digit_05",
+        "titolo": "Opera Digit 05",
+        "descrizione": "Descrizione per l'opera Digit 05.",
+        "immagini": ["digit_05.jpg", "digit_full_05.jpg"]
+    },
+    {
+        "slug": "09",
+        "titolo": "Opera 09",
+        "descrizione": "Descrizione per l'opera 09.",
+        "immagini": ["09.jpg", "09_full.jpg"]
+    },
+    {
+        "slug": "10",
+        "titolo": "Opera 10",
+        "descrizione": "Descrizione per l'opera 10.",
+        "immagini": ["10.jpg", "10_full.jpg"]
+    },
+    {
+        "slug": "11",
+        "titolo": "Opera 11",
+        "descrizione": "Descrizione per l'opera 11.",
+        "immagini": ["11.jpg", "11_full.jpg"]
+    },
+    {
+        "slug": "digit_06",
+        "titolo": "Opera Digit 06",
+        "descrizione": "Descrizione per l'opera Digit 06.",
+        "immagini": ["digit_06.jpg", "digit_full_06.jpg"]
+    },
+    {
+        "slug": "02",
+        "titolo": "Opera 02",
+        "descrizione": "Descrizione per l'opera 02.",
+        "immagini": ["02.jpg", "02_full.jpg"]
+    },
+    {
+        "slug": "12",
+        "titolo": "Opera 12",
+        "descrizione": "Descrizione per l'opera 12.",
+        "immagini": ["12.jpg", "12_full.jpg"]
+    },
+    {
+        "slug": "digit_08",
+        "titolo": "Opera Digit 08",
+        "descrizione": "Descrizione per l'opera Digit 08.",
+        "immagini": ["digit_08.jpg", "digit_full_08.jpg"]
+    },
+    {
+        "slug": "13",
+        "titolo": "Opera 13",
+        "descrizione": "Descrizione per l'opera 13.",
+        "immagini": ["13.jpg", "13_full.jpg"]
+    },
+    {
+        "slug": "14",
+        "titolo": "Opera 14",
+        "descrizione": "Descrizione per l'opera 14.",
+        "immagini": ["14.jpg", "14_full.jpg"]
+    },
+    {
+        "slug": "15",
+        "titolo": "Opera 15",
+        "descrizione": "Descrizione per l'opera 15.",
+        "immagini": ["15.jpg", "15_full.jpg"]
+    },
+    {
+        "slug": "digit_09",
+        "titolo": "Opera Digit 09",
+        "descrizione": "Descrizione per l'opera Digit 09.",
+        "immagini": ["digit_09.jpg", "digit_full_09.jpg"]
+    },
+    {
+        "slug": "16",
+        "titolo": "Opera 16",
+        "descrizione": "Descrizione per l'opera 16.",
+        "immagini": ["16.jpg", "16_full.jpg"]
+    },
+    {
+        "slug": "17",
+        "titolo": "Opera 17",
+        "descrizione": "Descrizione per l'opera 17.",
+        "immagini": ["17.jpg", "17_full.jpg"]
+    },
+    {
+        "slug": "18",
+        "titolo": "Opera 18",
+        "descrizione": "Descrizione per l'opera 18.",
+        "immagini": ["18.jpg", "18_full.jpg"]
+    },
+    {
+        "slug": "21",
+        "titolo": "Opera 21",
+        "descrizione": "Descrizione per l'opera 21.",
+        "immagini": ["21.jpg", "21_full.jpg"]
+    },
+    {
+        "slug": "22",
+        "titolo": "Opera 22",
+        "descrizione": "Descrizione per l'opera 22.",
+        "immagini": ["22.jpg", "22_full.jpg"]
+    }
+]

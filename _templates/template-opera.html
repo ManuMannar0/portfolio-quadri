@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Questo titolo verrà generato dinamicamente -->
+    <title>{{TITOLO}} | Nome Artista</title> 
+    
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/detail-page.css">
+</head>
+<body>
+
+    <div class="main-container detail">
+        {{HEADER_NAV_HTML}}
+        <main class="artwork-detail-container">
+            <h1 class="artwork-title">{{TITOLO}}</h1>
+            <div class="artwork-info"><p>{{DESCRIZIONE}}</p></div>
+            {{IMMAGINI_HTML}}
+        </main>
+    </div>
+
+</body>
+</html>

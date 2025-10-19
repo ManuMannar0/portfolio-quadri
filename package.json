@@ -1,0 +1,29 @@
+{
+  "name": "portfolio-quadri",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+"scripts": {
+  "build": "node _scripts/build.js",
+  "watch": "nodemon --watch _data --watch _templates --watch css -e js,html,json,css --exec \"npm run build\"",
+  "serve": "live-server dist --wait=500",
+  "dev": "concurrently \"npm:watch\" \"npm:serve\"",
+  "deploy": "node _scripts/deploy.js"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ManuMannar0/portfolio-quadri.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ManuMannar0/portfolio-quadri/issues"
+  },
+  "homepage": "https://github.com/ManuMannar0/portfolio-quadri#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "live-server": "^1.2.2",
+    "nodemon": "^3.1.10"
+  }
+}
