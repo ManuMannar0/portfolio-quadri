@@ -7,6 +7,15 @@
 
 /* Barra di navigazione */
 .main-nav {
+    /* Proprietà per l'effetto sticky */
+    position: -webkit-sticky; /* Per compatibilità con Safari */
+    position: sticky;
+    top: 0; /* Si blocca quando il suo bordo superiore tocca la cima della finestra */
+    
+    /* Proprietà estetiche necessarie quando è sticky */
+    background-color: #ffffffc9; /* Sfondo per non far trasparire il contenuto sottostante */
+    z-index: 1000; /* Assicura che rimanga sopra tutti gli altri elementi */
+    
     display: flex;
     /* Impila gli elementi (logo e menu) uno sopra l'altro */
     flex-direction: column;
@@ -36,4 +45,10 @@
     font-weight: bold;
     font-size: 14px;
     letter-spacing: 1px;
+}
+
+.nav-menu li.is-active a {
+    /* Scegli lo stile che preferisci. Esempi: */
+    color: black; /* Cambia colore */
+    text-decoration: underline; /* Aggiunge una sottolineatura */
 }
